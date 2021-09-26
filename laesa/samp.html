@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form action ="" method="post">
+    <input type="submit" name="student" value="student">
+    <input type="submit" name="admin" value="admin" >
+
+<?php
+ include('dbconn1.php');
+    if(isset($_POST['student'])){
+      $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+       $Name=filter_input(INPUT_POST,'Name');
+        $Email=filter_input(INPUT_POST,'Email');
+        echo "The student function is called.";
+        echo '<form action="" method="post" class="mb-3">
+            <input type="text" name="Name" placeholder="Name" required>
+<input type="Email" name="Email" placeholder="email" required>
+        </form>';
+        echo '<form action="" method="post" class="mb-3">
+            <input type="submit" name="submit" >
+        </form>';
+        if(isset($_POST['submit'])){
+
+$sql = "INSERT INTO student_details (Name,Email) values ($Name,$Email)";
+ $result = mysqli_query($sql);
+ if(!$result)
+    {
+        echo mysqli_error();
+    }
+    else
+    {
+        echo "Records added successfully.";
+    }
+}
+else
+{
+  echo "error in query ";
+}
+    }
+    else
+    {
+      echo "Error";
+    }
+    if(isset($_POST['admin'])){
+        echo "The admin function is called.";
+      $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+        echo '<form action="" method="post" class="mb-3">
+            <input type="text" name="Name" placeholder="Name" required>
+<input type="Email" name="Email" placeholder="email" required>
+        </form>';
+        echo '<form action="" method="post" class="mb-3">
+            <input type="submit" name="submit" >
+        </form>';
+        $Name=filter_input(INPUT_POST,'Name');
+        $Email=filter_input(INPUT_POST,'Email');
+        if(isset($_POST['submit'])){
+
+$sql = "INSERT INTO admin_details (Name,Email) values ($Name,$Email)";
+if ($conn->query($sql)){
+echo "New record is inserted sucessfully";
+}
+else{
+echo "Error: ";
+}
+}
+    }
+?>
+</form>
+</body>
+</html>*/
