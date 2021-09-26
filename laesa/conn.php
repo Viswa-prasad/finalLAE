@@ -7,6 +7,7 @@ $dbpassword = "";
 $dbname = "learn_earn";
 
 // Create connection
+// checking git 
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
 // Check connection
