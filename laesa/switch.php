@@ -439,15 +439,51 @@ case 2:
     </body>
 
     </html>
+
+
+
+
     <?php
       break;    
       case 4:?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!DOCTYPE html>
     <html>
 
     <head>
     </head>
+    <style>
+.topic_tabs {
+    border: 2px solid #009CEA;
+    font-family: "Raleway", sans-serif;
+    padding-top: 6px;
+    /margin-bottom: 3px;/
+}
+
+.heading {
+    font-weight: 900;
+    padding-right: 20%;
+
+}
+
+.text {
+    padding-left: 20%;
+}
+</style>
 
     <body>
         <section id="breadcrumbs" class="breadcrumbs">
@@ -459,234 +495,84 @@ case 2:
                 </ol>
             </div>
         </section>
-        <div>
-            <div class="container">
-                <br>
 
-
-
-
-                <!-- Trigger/Open The Modal -->
-                <button id="myBtn">Open Modal</button>
-
-                <!-- The Modal -->
-
-
-
-
-                <section id="services" class="services section-bg">
+        
+            <section id="services" class="services section-bg">
                     <div class="container">
                         <center>
                             <div class="row">
-                                <div class="col-md-2 col-lg-6 d-flex mb-1 mb-lg-8" data-aos="zoom-in">
+                                <div class="col-md-2 col-lg-6 d-flex mb-1 mb-lg-8" data-aos="zoom-in" >
                                     <div class="icon-box icon-box-pink">
                                         <div class="icon"><i class="bx bxl-dribbble"></i></div>
                                         <h4 class="title">
-                                            <button id="myBtn">Students</button>
-
-                                            <style>
-                                            body {
-                                                font-family: Arial, Helvetica, sans-serif;
-                                            }
-
-                                            /* The Modal (background) */
-                                            .modal {
-                                                display: none;
-                                                /* Hidden by default */
-                                                position: fixed;
-                                                /* Stay in place */
-                                                z-index: 1;
-                                                /* Sit on top */
-                                                padding-top: 100px;
-                                                /* Location of the box */
-                                                left: 0;
-                                                top: 0;
-                                                width: 100%;
-                                                /* Full width */
-                                                height: 100%;
-                                                /* Full height */
-                                                overflow: auto;
-                                                /* Enable scroll if needed */
-                                                background-color: rgb(0, 0, 0);
-                                                /* Fallback color */
-                                                background-color: rgba(0, 0, 0, 0.4);
-                                                /* Black w/ opacity */
-                                            }
-
-                                            /* Modal Content */
-                                            .modal-content {
-                                                background-color: #fefefe;
-                                                margin: auto;
-                                                padding: 20px;
-                                                border: 1px solid #888;
-                                                width: 80%;
-                                            }
-
-                                            /* The Close Button */
-                                            .close {
-                                                color: #aaaaaa;
-                                                float: right;
-                                                font-size: 28px;
-                                                font-weight: bold;
-                                            }
-
-                                            .close:hover,
-                                            .close:focus {
-                                                color: #000;
-                                                text-decoration: none;
-                                                cursor: pointer;
-                                            }
-                                            </style>
-
-                                            <script>
-                                            // Get the modal
-                                            var modal = document.getElementById("myModal");
-
-                                            // Get the button that opens the modal
-                                            var btn = document.getElementById("myBtn");
-
-                                            // Get the <span> element that closes the modal
-                                            var span = document.getElementsByClassName("close")[0];
-
-                                            // When the user clicks the button, open the modal 
-                                            btn.onclick = function() {
-                                                modal.style.display = "block";
-                                            }
-
-                                            // When the user clicks on <span> (x), close the modal
-                                            span.onclick = function() {
-                                                modal.style.display = "none";
-                                            }
-
-                                            // When the user clicks anywhere outside of the modal, close it
-                                            window.onclick = function(event) {
-                                                if (event.target == modal) {
-                                                    modal.style.display = "none";
-                                                }
-                                            }
-                                            </script>
+                                                Students
                                         </h4>
-                                        <p class="description">Provides all the information of all the
-                                            students
-                                            enrolled
-                                            with
-                                            us.
+                                        <p class="description"> Clicking here enables you to enroll new Students to the System.
+                                            
                                         </p>
                                     </div>
                                 </div>
-                                <div id="myModal" class="modal">
-                                    <!-- Modal content -->
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <p>Some text in the Modal..</p>
-                                    </div>
-                                </div>
 
+                               
                                 <!-- align-items-stretch -->
                                 <div class="col-md-2 col-lg-6 d-flex mb-1 mb-lg-8" data-aos="zoom-in"
-                                    data-aos-delay="100">
+                                    data-aos-delay="100" id="myBtn2">
                                     <div class="icon-box icon-box-cyan">
                                         <div class="icon"><i class="bx bx-file"></i></div>
-                                        <h4 class="title"><a href="switch.php?v=2">Admin</a></h4>
-                                        <p class="description">Provides all the information of all the admins and the
-                                            students
-                                            assigned to them.
+                                        <h4 class="title"><a href="#">Admin</a></h4>
+                                        <p class="description"> Clicking here enables you to enroll new Admin to the System.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </center>
                     </div>
-                </section>
+            </section>
 
 
-
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>New Registration</h2>
-                    <!-- <p>Below is the list of tasks done by all the registered students</p> -->
-                </div>
-                <form action="" method="post">
-                    <input type="submit" name="student" value="student">
-                    <input type="submit" name="admin" value="admin">
-
-                    <?php
-
-    //if(isset($_POST['student']))
-      $conn = mysqli_connect("localhost","root","","learn_earn");
-      echo "The student function is called.";
-      ?>
-                    <form action="" method="POST" class="mb-3">
-                        <input type="number" name="Name" placeholder="Name" required>
-                        <input type="text" name="Email" placeholder="text" required>
-                        <input type="submit" name="submit">
-                    </form>
-                    <p> hi I worked </p>
-                    <?php
-       if(isset($_POST['submit']))
-       {
-      $name = $_POST['Name'];
-      $pass = $_POST['Email'];
-      echo $name;
-      echo $pass;
-      $sql = "INSERT INTO student_login(Student_Id,Password) VALUES('$name','$pass')";
-      $result = $conn->query($sql);
-      if ($result) 
-       {
-        echo "New record created successfully";
-       }
-      else
-       {
-         echo mysqli_error($conn);
-       }
-}
-
-    if(isset($_POST['admin'])){
-        echo "The admin function is called.";
-      $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-        echo '<form action="" method="post" class="mb-3">
-            <input type="text" name="Name" placeholder="Name" required>
-<input type="Email" name="Email" placeholder="email" required>
-        </form>';
-        echo '<form action="" method="post" class="mb-3">
-            <input type="submit" name="submit" >
-        </form>';
-        $Name=filter_input(INPUT_POST,'Name');
-        $Email=filter_input(INPUT_POST,'Email');
-        if(isset($_POST['submit'])){
-
-$sql = "INSERT INTO admin_details (Name,Email) values ($Name,$Email)";
-if ($conn->query($sql)){
-echo "New record is inserted sucessfully";
-}
-else{
-echo "Error: ";
-}
-}
-    }
-?>
-                </form>
+</head>
     </body>
-
     </html>
-    <?php
+
+
+
+
+
+
+<?php
         break;
-case 5:?>
+case 5:
+?>
     <!DOCTYPE html>
     <html>
 
     <head>
-        <title>Add Records in Database</title>
+        <title>Comments</title>
     </head>
 
+    
     <body>
 
+    <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="index.php">Home</a></li>
+                    <li>Super Admin Page</li>
+                    <li>Comments</li>
+                </ol>
+            </div>
+        </section>
 
-
-        <form action="" method="post" class="mb-3">
-            Student Id
-            <select name="ID[]">
-                <option disabled selected>-- Select StudentId --</option>
+        <div>
+            <div class="container">
+                <br>
+                <div class="section-title" data-aos="fade-up">
+                    <form action="" method="post" class="mb-3">
+           <h2>Comments</h2>
+           <p>Select the apropriate student Id in the list below and kindly provide the comment in the given section</p>
+            <br>
+             Student ID : </h6><select name="ID[]">
+                <option disabled selected> Select Student Id </option>
                 <?php
         include "dbconn1.php";  
         $records = mysqli_query($db, "SELECT Student_Id From student_details"); 
@@ -696,27 +582,27 @@ case 5:?>
             echo "<option value='". $data['Student_Id'] ."'>" .$data['Student_Id'] ."</option>"; 
         } 
 
-    ?>
+    ?> </select>&nbsp;<br>
 
                 <?php
    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
   ?>
 
                 <form action="" method="post" class="mb-3">
-                    <input type="text" name="comments" placeholder="comments" required>
+                <br>Enter your comments : <input type="text" name="comments" placeholder="comments" required><br><br>
                     <input type="submit" name="submit">
                 </form>
                 <?php
         if(isset($_POST['submit'])){
           foreach($_POST['ID'] as $selected){
-            echo 'U Selected' . $selected;
+            echo 'You Selected ' . $selected;
             $comments=filter_input(INPUT_POST,'comments');
 
 $sql ="UPDATE student_details SET comments='$comments' WHERE Student_Id ='$selected'";
              $result = $conn->query($sql);
       if ($result) 
        {
-        echo "New record created successfully";
+        echo "  New record created successfully";
        }
       else
        {
@@ -727,12 +613,23 @@ $sql ="UPDATE student_details SET comments='$comments' WHERE Student_Id ='$selec
         } 
       
     ?>
-                <?php mysqli_close($db);  // close connection ?>
-            </select>
+                <?php mysqli_close($db);   ?>
+           
         </form>
+    </div1>
+    </div>
+    </div>
+    <div>
+
+       
     </body>
 
     </html>
+
+
+
+
+
     <?php
               break;
 
@@ -744,110 +641,170 @@ case 6:?>
         <title></title>
     </head>
 
-    <body>
-        <form action="" method="post" class="mb-3">
-            Student Id
-            <select name="ID[]">
-                <option disabled selected>-- Select StudentId --</option>
 
+    <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="index.php">Home</a></li>
+                    <li>Super Admin Page</li>
+                    <li>Mark Over-rides</li>
+                </ol>
+            </div>
+        </section>
+        <div class="container">
+        <br>
+                <div class="section-title" data-aos="fade-up">
+            <body>
 
+            <h2>Over-rides</h2>
+           <p>Select the apropriate student Id in the list below and kindly provide the new updated marks in the given section.</p>
+            <br><br>
+                <form action="" method="post" class="mb-3">
+                    Student Id &#160; &#160; &#160;  &#160;  &#160; &#160;:   &#160; 
+                    <select name="ID[]">
+                        <option disabled selected>-- Select StudentId --</option>
+                        <?php
+                        include "dbconn1.php";  
+                        $records = mysqli_query($db, "SELECT Student_id From tasks"); 
 
-                <?php
-     include "dbconn1.php";  
-        $records = mysqli_query($db, "SELECT Student_id From tasks"); 
+                        while($data = mysqli_fetch_array($records))
+                            {
+                                echo "<option value='". $data['Student_id'] ."'>" .$data['Student_id'] ."</option>"; 
+                            }
+                        ?>
+                    </select><br><br>
+                        New Updated Mark :    &#160;   
+                        <input type="number" name="Marks" placeholder="Marks"><br><br>
+                        <input type="submit" name="submit"><br> <br> 
+                        <?php
 
-        while($data = mysqli_fetch_array($records))
-        {
-            echo "<option value='". $data['Student_id'] ."'>" .$data['Student_id'] ."</option>"; 
-        }
-?>
-
-                <input type="number" name="Marks" placeholder="Marks">
-                <input type="submit" name="submit">
-                <?php
-
-      
-  if(isset($_POST['submit'])){
-    
-    foreach($_POST['ID'] as $selected){
-      //echo 'U Selected' . $selected;
-      $Marks = $_POST['Marks'];
-      //echo $Marks;
-      
-             $sql ="UPDATE tasks SET Marks='$Marks',Task_Status='2' WHERE Student_id ='$selected'";
-             //$result = $conn->query($sql);
-                if (mysqli_query($db, $sql)) {
-                   echo "New record created successfully";
-                } 
-                else {
-                  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                     }
-        }
-      }
-        ?>
-            </select>
-        </form>
-    </body>
+            
+        if(isset($_POST['submit'])){
+            
+            foreach($_POST['ID'] as $selected){
+            //echo 'U Selected' . $selected;
+            $Marks = $_POST['Marks'];
+            //echo $Marks;
+            
+                    $sql ="UPDATE tasks SET Marks='$Marks',Task_Status='2' WHERE Student_id ='$selected'";
+                    //$result = $conn->query($sql);
+                        if (mysqli_query($db, $sql)) {
+                        echo "New record created successfully";
+                        } 
+                        else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                            }
+                }
+            }
+                ?>
+                   
+                </form>
+            </body>
+        </div>
 
     </html>
     <?php
 break;
 
+
+
 case 7:?>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
     <head>
         <title></title>
     </head>
 
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.php">Home</a></li>
+                <li>Super Admin Page</li>
+                <li>Account Details</li>
+            </ol>
+        </div>
+    </section>
+
     <body>
-        <form action="" method="post" class="mb-3">
-            Student Id
-            <select name="ID[]">
-                <option disabled selected>-- Select StudentId --</option>
+    <div>
+            <div class="container">
+                <br>
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Student Account Details </h2>
+                    <p>Select the apropriate student Name to get their account number.</p>
+                </div>
+
+                <form action="" method="post" class="mb-3">
+                    Student Id &#160; &#160; &#160;  &#160;  &#160; &#160;:   &#160; 
+                    <select name="ID[]">
+                        <option disabled selected>-- Select StudentId --</option>
+                        <?php
+                        include "dbconn1.php";  
+                        $records = mysqli_query($db, "SELECT Name From student_details"); 
+
+                        while($data = mysqli_fetch_array($records))
+                            {
+                                echo "<option value='". $data['Name'] ."'>" .$data['Name'] ."</option>"; 
+                            }
+                        ?>
+                    </select><br><br>
+
+                <!-- <section id="table" class="tablepost"> -->
+                <table class="table table-striped table-dark">
+                    <div>
+                        <thead>
+                            <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Hometown</th>
+                                <th scope="col">Job</th>
+                            </tr>
+                        </thead>
+                        <br>
+
+                        <!--  -->
+                        <?php
+
+            
+if(isset($_POST['submit'])){
+    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+    foreach($_POST['ID'] as $selected){
+    //echo 'U Selected' . $selected;
+    $Marks = $_POST['Marks'];
+    //echo $Marks;
+    
+            $sql ="SELECT AC_number FROM student_details WHERE Student_id ='$selected'";
+            //$result = $conn->query($sql);
+            $result = $conn->query($sql);
+
+                                while($row = mysqli_fetch_array($result)) {
+                                 ?>
+
+<!--  -->
+
+                        
+                        <tr>
+                            <td><?php echo $row['Name']; ?></td>
+                            <td><?php echo $row['AC_number']; ?></td>
+                        </tr>
+                        <?php
+                              }
+                            }}
+                            ?>
+                    </div>
+                </table>
+                </section>
+    
 
 
 
-                <?php
-       include "dbconn1.php";  
-          $records = mysqli_query($db, "SELECT Student_id From tasks"); 
-  
-          while($data = mysqli_fetch_array($records))
-          {
-              echo "<option value='". $data['Student_id'] ."'>" .$data['Student_id'] ."</option>"; 
-          }
-  ?>
 
-                <input type="number" name="Marks" placeholder="Marks">
-                <input type="submit" name="submit">
-                <?php
-  
-        
-    if(isset($_POST['submit'])){
-      
-      foreach($_POST['ID'] as $selected){
-        //echo 'U Selected' . $selected;
-        $Marks = $_POST['Marks'];
-        //echo $Marks;
-        
-               $sql ="UPDATE tasks SET Marks='$Marks',Task_Status='2' WHERE Student_id ='$selected'";
-               //$result = $conn->query($sql);
-                  if (mysqli_query($db, $sql)) {
-                     echo "New record created successfully";
-                  } 
-                  else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                       }
-          }
-        }
-          ?>
-            </select>
-        </form>
     </body>
+</html>
 
-    </html>
-    <?php
+<?php
   break;
 
 
